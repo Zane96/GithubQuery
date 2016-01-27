@@ -13,9 +13,9 @@ import java.util.List;
 /**
  * Created by Zane on 16/1/27.
  */
-public class ReposListActivity extends BaseListAdapterPresenter<Repos>{
+public class ReposListAdapter extends BaseListAdapterPresenter<Repos>{
 
-    public ReposListActivity(Context context, List<Repos> datas){
+    public ReposListAdapter(Context context, List<Repos> datas){
         super(context, datas);
     }
 

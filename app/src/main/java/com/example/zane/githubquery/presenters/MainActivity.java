@@ -12,6 +12,7 @@ import butterknife.ButterKnife;
 public class MainActivity extends BaseActivityPresenter<MainView> {
 
 
+
     @Override
     public Class<MainView> getRootViewClass() {
         return MainView.class;
