@@ -1,5 +1,6 @@
 package com.example.zane.githubquery.view;
 
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,33 +10,29 @@ import com.example.zane.easymvp.view.BaseListViewHolderImpl;
 import com.example.zane.githubquery.R;
 import com.example.zane.githubquery.model.bean.Repos;
 
-import butterknife.Bind;
-import butterknife.ButterKnife;
 
 /**
  * Created by Zane on 16/1/27.
  */
 public class ReposListViewHolder extends BaseListViewHolderImpl<Repos> {
 
-    @Bind(R.id.repos_item_text)
-    TextView reposItemText;
-
-    private View v;
+    private TextView reposItemText;
 
     public ReposListViewHolder(ViewGroup parent) {
         super(LayoutInflater.from(parent.getContext())
                       .inflate(R.layout.mainactivity_repositem_layout, parent, false));
-        v = LayoutInflater.from(parent.getContext())
-                    .inflate(R.layout.mainactivity_repositem_layout, parent, false);
+
+        initView();
     }
 
     @Override
     public void initView() {
-        ButterKnife.bind(this, v);
+        reposItemText = $(R.id.repos_item_text);
     }
 
     @Override
     public void setData(Repos repos) {
+        Log.i("ViewHolder", repos.getName()+" gg "+String.valueOf(reposItemText));
         reposItemText.setText(repos.getName());
     }
 }

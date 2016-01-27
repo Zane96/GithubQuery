@@ -1,5 +1,6 @@
 package com.example.zane.githubquery.view;
 
+import android.util.Log;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
@@ -27,6 +28,7 @@ public class MainView extends BaseViewImpl {
     }
 
     public String getEditText(){
+        Log.i("MainView", edittext+"heihei");
         return edittext.getText().toString();
     }
 }

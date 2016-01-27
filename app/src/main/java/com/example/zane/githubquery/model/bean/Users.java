@@ -48,6 +48,15 @@ public class Users implements Serializable{
     private int public_repos;
     private int followers;
     private int following;
+    private int id;
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
 
     public void setLogin(String login) {
         this.login = login;

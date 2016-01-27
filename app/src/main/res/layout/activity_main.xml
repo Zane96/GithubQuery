@@ -17,8 +17,8 @@
         android:text="Github用户查询"/>
 
     <EditText
-        android:layout_width="80dp"
-        android:layout_height="20dp"
+        android:layout_width="160dp"
+        android:layout_height="40dp"
         android:hint="输入用户名"
         android:textSize="14sp"
         android:singleLine="true"

@@ -10,6 +10,7 @@
         android:layout_height="wrap_content"
         android:textSize="24sp"
         android:layout_marginLeft="20dp"
+        android:text="haha"
         android:id="@+id/repos_item_text"
         android:textAppearance="@style/TextAppearance.AppCompat.Body1"/>
 

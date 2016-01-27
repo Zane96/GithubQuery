@@ -1,10 +1,13 @@
 package com.example.zane.githubquery.view;
 
 import android.graphics.Bitmap;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.example.zane.easymvp.view.BaseViewImpl;
 import com.example.zane.githubquery.R;
 
@@ -29,29 +32,42 @@ public class UserInfoView extends BaseViewImpl {
     TextView textviewLocation;
     @Bind(R.id.repos_query)
     Button reposQuery;
+    @Bind(R.id.userinfo_activity_progressbar)
+    ProgressBar userinfoActivityProgressbar;
 
     @Override
     public int getRootViewId() {
         return R.layout.activity_userinfo_layout;
     }
 
-    public void setImageviewAvatar(Bitmap bitmap){
-        imageviewAvatar.setImageBitmap(bitmap);
+    public ImageView getImageviewAvatar() {
+        return imageviewAvatar;
     }
-    public void setLoginName(String loginName){
+
+    public void setLoginName(String loginName) {
         textviewLoginname.setText(loginName);
     }
-    public void setTextviewName(String name){
+
+    public void setTextviewName(String name) {
         textviewName.setText(name);
     }
-    public void setTextviewFollowersname(int followersNum){
+
+    public void setTextviewFollowersname(int followersNum) {
         textviewFollowersname.setText(String.valueOf(followersNum));
     }
-    public void setTextviewFollowingname(int followingNum){
+
+    public void setTextviewFollowingname(int followingNum) {
         textviewFollowingname.setText(String.valueOf(followingNum));
     }
-    public void setTextviewLocation(String location){
+
+    public void setTextviewLocation(String location) {
         textviewLocation.setText(location);
+    }
+    public void hideProgressbar(){
+        userinfoActivityProgressbar.setVisibility(View.INVISIBLE);
+    }
+    public void seeProgressBar(){
+        userinfoActivityProgressbar.setVisibility(View.VISIBLE);
     }
 
 }

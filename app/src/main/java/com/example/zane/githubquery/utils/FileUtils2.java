@@ -1,8 +1,10 @@
 package com.example.zane.githubquery.utils;
 
+import android.content.Context;
 import android.os.Environment;
 
 import com.example.zane.githubquery.app.MyApplication;
+import com.example.zane.githubquery.inject.qualifier.ContextType;
 
 import java.io.File;
 
@@ -13,9 +15,10 @@ import javax.inject.Inject;
  */
 public class FileUtils2 {
 
-    private static MyApplication mApplicationContext = MyApplication.getApplication();
+    static Context mApplicationContext = MyApplication.getApplicationContext2();
 
     public static File getDiskCacheDir(String uniqueName) {
+
         String cachePath;
         if(!"mounted".equals(Environment.getExternalStorageState()) && Environment.isExternalStorageRemovable()) {
             cachePath = mApplicationContext.getCacheDir().getPath();

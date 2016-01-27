@@ -17,7 +17,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:gravity="center_vertical"
@@ -25,7 +25,7 @@
             />
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:id="@+id/textview_loginname"
@@ -38,7 +38,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:gravity="center_vertical"
@@ -46,7 +46,7 @@
             />
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:id="@+id/textview_name"
@@ -59,7 +59,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:gravity="center_vertical"
@@ -67,7 +67,7 @@
             />
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:id="@+id/textview_followersname"
@@ -80,7 +80,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:gravity="center_vertical"
@@ -88,7 +88,7 @@
             />
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:id="@+id/textview_followingname"
@@ -101,7 +101,7 @@
         android:orientation="horizontal">
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:textSize="18sp"
             android:gravity="center_vertical"
@@ -109,7 +109,7 @@
             />
         <TextView
             android:layout_weight="1"
-            android:layout_width="0"
+            android:layout_width="0dp"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
             android:id="@+id/textview_location"
@@ -124,5 +124,14 @@
             android:text="查询库"
             android:layout_gravity="center_horizontal"
             />
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="invisible"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:id="@+id/userinfo_activity_progressbar"
+        />
 
 </LinearLayout>

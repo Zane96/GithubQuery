@@ -17,13 +17,10 @@ import rx.Observable;
  */
 public interface GithubApiService {
 
-    @GET("/{userName}")
+    @GET("{userName}")
     Observable<Users> getUserInfo(@Path("userName") String userName);
 
-    @GET("/{userName}/repos")
+    @GET("{userName}/repos")
     Observable<List<Repos>> getReposInfo(@Path("userName") String userName);
-
-    @GET("/{id}?v=3")
-    Observable<Bitmap> getAvatar(@Path("id") String id);
 
 }

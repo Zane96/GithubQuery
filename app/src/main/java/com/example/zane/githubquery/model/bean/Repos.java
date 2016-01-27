@@ -5,6 +5,14 @@ package com.example.zane.githubquery.model.bean;
  */
 public class Repos {
 
+    private String[] datas = {"A", "A", "A", "A", "A", "A", "A", "A", "A", "A"};
+
+    private String[] otherDatas = {"B", "B", "B", "B", "B", "B", "B", "B", "B", "B"};
+
+    public String[] getDatas() {
+        return datas;
+    }
+
     /**
      * id : 41420190
      * name : ZHIHUPaper
