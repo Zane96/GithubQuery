@@ -1,5 +1,7 @@
 package com.example.zane.githubquery.model.bean.data.remote;
 
+import android.graphics.Bitmap;
+
 import com.example.zane.githubquery.model.bean.Repos;
 import com.example.zane.githubquery.model.bean.Users;
 
@@ -21,5 +23,7 @@ public interface GithubApiService {
     @GET("/{userName}/repos")
     Observable<List<Repos>> getReposInfo(@Path("userName") String userName);
 
+    @GET("/{id}?v=3")
+    Observable<Bitmap> getAvatar(@Path("id") String id);
 
 }

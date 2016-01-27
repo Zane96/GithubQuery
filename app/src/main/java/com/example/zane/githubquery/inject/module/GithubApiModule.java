@@ -3,6 +3,7 @@ package com.example.zane.githubquery.inject.module;
 import android.text.TextUtils;
 
 import com.example.zane.githubquery.config.GithubApi;
+import com.example.zane.githubquery.inject.qualifier.GithubServiceType;
 import com.example.zane.githubquery.model.bean.data.remote.GithubApiService;
 import com.example.zane.githubquery.utils.FileUtils2;
 import com.kermit.exutils.utils.ExUtils;
@@ -60,6 +61,7 @@ public class GithubApiModule {
     }
 
     @Provides
+    @GithubServiceType("userinfo")
     GithubApiService providesGithubApiService(Interceptor interceptor, Cache cache){
 
         OkHttpClient client = new OkHttpClient();
@@ -77,4 +79,16 @@ public class GithubApiModule {
 
     }
 
+    @Provides
+    @GithubServiceType("avatar")
+    GithubApiService providesGithubApiService(){
+
+        Retrofit retrofit = new Retrofit.Builder()
+                                    .baseUrl(GithubApi.avatarApi)
+                                    .addCallAdapterFactory(RxJavaCallAdapterFactory.create())
+                                    .build();
+
+        return retrofit.create(GithubApiService.class);
+
+    }
 }

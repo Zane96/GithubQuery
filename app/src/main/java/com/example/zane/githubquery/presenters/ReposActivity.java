@@ -21,7 +21,7 @@ public class ReposActivity extends BaseActivityPresenter<ReposView>{
     @Override
     public void inCreat() {
         manager = new LinearLayoutManager(this);
-        
+
     }
 
     @Override

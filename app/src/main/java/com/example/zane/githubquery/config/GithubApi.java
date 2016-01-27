@@ -5,4 +5,5 @@ package com.example.zane.githubquery.config;
  */
 public class GithubApi {
     public final static String githubApi = "https://api.github.com/users";
+    public final static String avatarApi = "https://avatars.githubusercontent.com/u";
 }
