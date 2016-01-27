@@ -4,14 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.example.zane.githubquery.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"/>
+        android:textSize="18sp"
+        android:id="@+id/texiview"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Github用户查询"/>
+
+    <EditText
+        android:layout_width="80dp"
+        android:layout_height="20dp"
+        android:hint="输入用户名"
+        android:textSize="14sp"
+        android:singleLine="true"
+        android:id="@+id/edittext"
+        android:layout_below="@id/texiview"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:layout_width="40dp"
+        android:layout_height="20dp"
+        android:text="查询"
+        android:id="@+id/button_query"
+        android:layout_below="@id/edittext"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"/>
+
 </RelativeLayout>
