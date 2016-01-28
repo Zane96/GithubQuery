@@ -42,7 +42,7 @@ dependencies {
     compile "io.reactivex:rxandroid:$RX_VERSION"
     compile "io.reactivex:rxjava:$RX_VERSION"
     compile 'de.greenrobot:eventbus:2.4.0'
-    compile 'com.github.Zane96:EasyMVP:v1.2.3'
+    compile 'com.github.Zane96:EasyMVP:v1.2.4'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
     compile 'com.github.Kermit95:ExUtils:v1.0.1'
     compile 'com.github.bumptech.glide:glide:3.6.1'

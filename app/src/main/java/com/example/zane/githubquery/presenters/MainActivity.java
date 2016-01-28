@@ -24,7 +24,7 @@ public class MainActivity extends BaseActivityPresenter<MainView> {
     }
 
     @Override
-    public void inCreat() {
+    public void inCreat(Bundle bundle) {
 
 
 

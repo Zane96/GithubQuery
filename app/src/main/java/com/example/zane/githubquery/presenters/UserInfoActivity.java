@@ -3,6 +3,7 @@ package com.example.zane.githubquery.presenters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 
@@ -35,6 +36,7 @@ public class UserInfoActivity extends BaseActivityPresenter<UserInfoView>{
     Context mContext;
 
     private String userName;
+    private Users users2;
 
     @Override
     public Class<UserInfoView> getRootViewClass() {
@@ -42,12 +44,23 @@ public class UserInfoActivity extends BaseActivityPresenter<UserInfoView>{
     }
 
     @Override
-    public void inCreat() {
+    public void inCreat(Bundle bundle) {
 
         initInject();
 
-        userName = getIntent().getStringExtra(MainActivity.USERNAME);
-        queryUserInfo();
+        if (bundle == null) {
+            userName = getIntent().getStringExtra(MainActivity.USERNAME);
+            queryUserInfo();
+        }   else {
+            users2 = (Users)bundle.getSerializable("users");
+            userName = bundle.getString("username");
+            Glide.with(mContext).load(users2.getAvatar_url()).into(v.getImageviewAvatar());
+            v.setLoginName(users2.getLogin());
+            v.setTextviewName(users2.getName());
+            v.setTextviewLocation(users2.getLocation());
+            v.setTextviewFollowingname(users2.getFollowing());
+            v.setTextviewFollowersname(users2.getFollowers());
+        }
 
         v.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -89,6 +102,7 @@ public class UserInfoActivity extends BaseActivityPresenter<UserInfoView>{
 
                     @Override
                     public void onNext(Users users) {
+                        users2 = users;
                         Glide.with(mContext).load(users.getAvatar_url()).into(v.getImageviewAvatar());
                         v.hideProgressbar();
                         v.setLoginName(users.getLogin());
@@ -100,7 +114,12 @@ public class UserInfoActivity extends BaseActivityPresenter<UserInfoView>{
                 });
     }
 
-
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable("users", users2);
+        outState.putString("username", userName);
+    }
 
     @Override
     public void inDestory() {

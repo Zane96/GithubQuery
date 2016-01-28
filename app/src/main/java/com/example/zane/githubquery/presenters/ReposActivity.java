@@ -1,6 +1,7 @@
 package com.example.zane.githubquery.presenters;
 
 import android.content.Context;
+import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 
@@ -44,7 +45,7 @@ public class ReposActivity extends BaseActivityPresenter<ReposView>{
     }
 
     @Override
-    public void inCreat() {
+    public void inCreat(Bundle bundle) {
         initInject();
         manager = new LinearLayoutManager(this);
         userName = getIntent().getStringExtra(MainActivity.USERNAME);
