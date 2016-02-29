@@ -13,6 +13,7 @@ import javax.inject.Inject;
 import javax.inject.Singleton;
 
 import rx.Observable;
+import rx.Subscriber;
 import rx.functions.Func1;
 
 /**
@@ -30,10 +31,31 @@ public class DataManager {
         mContext = context;
     }
 
-    //对用户信息进行一层过滤,然后在presenter中去调用这个方法.
+    //对用户信息进行一层过滤或者操作,然后在presenter中去调用这个方法.
+    //当然我在这里做的操作毫无意义，但是如果有需要还是会减少activity活着fragment中的代码量。
+    //presenter只负责调用。然后获得数据而不管代码的实现
     public Observable<Users> getUserInfo(String userName){
 
-        return githubApiService.getUserInfo(userName);
+        return githubApiService.getUserInfo(userName)
+                .map(new Func1<Users, Users>() {
+                    @Override
+                    public Users call(Users users) {
+                        String name = users.getName();
+                        users.setName(name + " datamanager");
+                        return users;
+                    }
+                })
+                .flatMap(new Func1<Users, Observable<Users>>() {
+                    @Override
+                    public Observable<Users> call(final Users users) {
+                        return Observable.create(new Observable.OnSubscribe<Users>() {
+                            @Override
+                            public void call(Subscriber<? super Users> subscriber) {
+                                subscriber.onNext(users);
+                            }
+                        });
+                    }
+                });
 
     }
 

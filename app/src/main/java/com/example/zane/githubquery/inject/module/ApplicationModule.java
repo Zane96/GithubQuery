@@ -35,6 +35,4 @@ public class ApplicationModule {
     Context providesContext(MyApplication application){
         return application.getApplicationContext();
     }
-
-
 }
