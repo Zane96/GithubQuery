@@ -8,6 +8,6 @@ app项目架构分析博客：[MVP中Model的进一步细化——DataManager](h
 ##mvp框架——EasyMVP
 >是自己的一套mvp开发框架，[项目地址](https://github.com/Zane96/EasyMVP)，还在不断完善中。
 ##样式
-![](https://github.com/Zane96/GithubQuery/blob/master/app/src/main/res/drawable/1.png)
-![](https://github.com/Zane96/GithubQuery/blob/master/app/src/main/res/drawable/2.png)
-![](https://github.com/Zane96/GithubQuery/blob/master/app/src/main/res/drawable/3.png)
+![](https://github.com/Zane96/GithubQuery/raw/master/app/src/main/res/drawable/1.png)
+![](https://github.com/Zane96/GithubQuery/raw/master/app/src/main/res/drawable/2.png)
+![](https://github.com/Zane96/GithubQuery/raw/master/app/src/main/res/drawable/3.png)
