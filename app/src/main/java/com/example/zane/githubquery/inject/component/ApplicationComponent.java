@@ -24,7 +24,5 @@ public interface ApplicationComponent {
 
     @ContextType("MyApplication")Context context();
 
-    GithubApiService githubApiService();
-
     DataManager dataManager();
 }

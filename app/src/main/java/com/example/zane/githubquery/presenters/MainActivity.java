@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Toast;
 
 import com.example.zane.easymvp.presenter.BaseActivityPresenter;
 import com.example.zane.githubquery.R;
@@ -39,6 +40,8 @@ public class MainActivity extends BaseActivityPresenter<MainView> {
                 startActivity(intent);
             }
         }, R.id.button_query);
+
+
     }
 
     @Override
