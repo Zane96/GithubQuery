@@ -43,7 +43,6 @@ dependencies {
     compile 'de.greenrobot:eventbus:2.4.0'
     compile 'com.github.Zane96:EasyMVP:v1.2.4'
     compile 'com.squareup.okhttp3:okhttp:3.0.1'
-    compile 'com.github.Kermit95:ExUtils:v1.0.1'
     compile 'com.github.bumptech.glide:glide:3.6.1'
     compile 'com.android.support:support-v4:23.1.1'
 }

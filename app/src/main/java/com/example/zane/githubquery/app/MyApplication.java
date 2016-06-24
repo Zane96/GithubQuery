@@ -6,7 +6,7 @@ import com.example.zane.githubquery.inject.component.ApplicationComponent;
 import com.example.zane.githubquery.inject.component.DaggerApplicationComponent;
 import com.example.zane.githubquery.inject.module.ApplicationModule;
 import com.example.zane.githubquery.inject.module.GithubApiModule;
-import com.kermit.exutils.utils.ExUtils;
+import com.jude.utils.JUtils;
 
 /**
  * Created by Zane on 16/1/26.
@@ -20,7 +20,7 @@ public class MyApplication extends Application{
     public void onCreate() {
         super.onCreate();
         application = this;
-        ExUtils.initialize(this);
+        JUtils.initialize(this);
     }
 
     public ApplicationComponent getAppComponent(){
